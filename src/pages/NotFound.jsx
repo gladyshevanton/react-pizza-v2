@@ -1,13 +1,11 @@
 import React from "react";
-import NotFoundBlock from '../components/NotFoundBlock/index'
-
+import NotFoundBlock from "../components/NotFoundBlock/index";
 
 const NotFound = () => {
   return (
     <>
-        <NotFoundBlock />
+      <NotFoundBlock />
     </>
-    
   );
 };
 
