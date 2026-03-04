@@ -76,7 +76,7 @@ export const Home = () => {
       const params = qs.parse(window.location.search.substring(1));
 
       /*const sort = sortList.find(
-        (obj) => obj.sortProperty === params.sortProperty
+        (obj) => obj.sortProperty === params.sortProperty,
       );*/
 
       dispatch(
