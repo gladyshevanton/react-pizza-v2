@@ -24,11 +24,9 @@ function Sort() {
   };
 
   React.useEffect(() => {
-    console.log("sort mounted");
     const handleClickOutside = (event) => {
       if (!event.composedPath().includes(sortRef.current)) {
         setOpen(false);
-        console.log("click outside");
       }
     };
 
