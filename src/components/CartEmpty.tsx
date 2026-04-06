@@ -14,11 +14,7 @@ const CartEmpty: React.FC = () => {
           <br />
           Для того, чтобы заказать пиццу, перейди на главную страницу.
         </p>
-        <img
-          src={cartEmptyImg as unknown as string}
-          className="empty-cart"
-          alt="Empty cart"
-        />
+        <img src={cartEmptyImg} className="empty-cart" alt="Empty cart" />
         <Link to="/" className="button button--black">
           <span>Вернуться назад</span>
         </Link>
