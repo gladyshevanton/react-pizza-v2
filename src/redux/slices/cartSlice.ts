@@ -12,7 +12,7 @@ export type CartItem = {
 };
 
 interface CartSliceState {
-  totalPrice: 0;
+  totalPrice: number;
   items: CartItem[];
 }
 const initialState: CartSliceState = {
@@ -50,8 +50,8 @@ const cartSlice = createSlice({
     },
 
     removeItem(state, action: PayloadAction<string>) {
-      const findItem = state.items.find((obj) => obj.id === action.payload);
-      state.totalPrice -= findItem.price * findItem.count;
+      /*const findItem = state.items.find((obj) => obj.id === action.payload);
+      state.totalPrice -= findItem.price * findItem.count;*/
       state.items = state.items.filter((obj) => obj.id !== action.payload);
     },
     clearItems(state) {
