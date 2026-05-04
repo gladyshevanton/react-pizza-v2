@@ -16,8 +16,11 @@ import { fetchPizzas } from "../redux/pizza/asyncActions";
 const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
+
+  import("../utils/math").then((math) => {
+    console.log(math.add(555, 111));
+  });
 
   const { items, status } = useSelector(selectPizzaData);
   const { categoryId, sort, currentPage, searchValue } =
