@@ -1,11 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Categories from "../components/Categories";
-import Sort from "../components/Sort";
-import PizzaBlock from "../components/PizzaBlock";
-import Skeleton from "../components/PizzaBlock/Skeleton";
-import Pagination from "../components/Pagination";
+
+import {PizzaBlock, Skeleton, Pagination, Sort, Categories} from "../components";
 
 import { useAppDispatch } from "../redux/store";
 import { selectPizzaData } from "../redux/pizza/selectors";
@@ -17,10 +14,6 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isMounted = React.useRef(false);
-
-  import("../utils/math").then((math) => {
-    console.log(math.add(555, 111));
-  });
 
   const { items, status } = useSelector(selectPizzaData);
   const { categoryId, sort, currentPage, searchValue } =

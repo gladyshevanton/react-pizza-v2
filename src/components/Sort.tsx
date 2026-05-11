@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Sort, SortPropertyEnum } from "../redux/filter/types";
+import { Sort as SortType, SortPropertyEnum } from "../redux/filter/types";
 import { setSort } from "../redux/filter/slice";
 
 type SortItem = {
@@ -13,7 +13,7 @@ type SortItem = {
 };*/
 
 type SortPopupProps = {
-  value: Sort;
+  value: SortType;
 };
 
 export const sortList: SortItem[] = [
@@ -25,7 +25,7 @@ export const sortList: SortItem[] = [
   { name: "алфавиту (ASC)", sortProperty: SortPropertyEnum.PRICE_ASC },
 ];
 
-const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
+export const Sort: React.FC<SortPopupProps> = React.memo(({ value }) => {
   const dispatch = useDispatch();
 
   const sortRef = React.useRef<HTMLDivElement>(null);
@@ -88,4 +88,3 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
   );
 });
 
-export default SortPopup;
